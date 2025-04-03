@@ -1,4 +1,5 @@
-from src.demo import print_hello_world
+import sys
+sys.path.append('.')
+import src.demo as demo
 
-
-assert print_hello_world() == "Hello World", "Function did not return expected value"
+assert demo.print_hello_world() == "Hello World", "Function did not return expected value"
