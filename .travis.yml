@@ -1,5 +1,5 @@
 language: python
-sudo : false
+sudo : true
 before_install: bash CI/scripts/before_install.sh
 install: bash CI/scripts/install.sh
 script: 
