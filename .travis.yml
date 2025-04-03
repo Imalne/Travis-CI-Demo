@@ -1,7 +1,28 @@
-language: python
+
+# system config
+arch: amd64          # optional, this is default, routes to a full VM
+os: linux            # optional, this is default
+dist: focal          # or bionic | xenial | trusty | precise with xenial as default
+
+# environment config
+env:
+  - TEST_TYPE=unit
 sudo : true
-before_install: bash CI/scripts/before_install.sh
+
+# language config
+language: python
+
+
+# package instal before build
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install vim
+
+# install dependencies, set to "skip" if not needed
 install: bash CI/scripts/install.sh
+
+
+
 script: 
   - python CI/test/test.py
   - python CI/test/test.py
