@@ -1,2 +1,7 @@
 language: python
-script: true
+sudo : false
+before_install: bash CI/scripts/before_install.sh
+install: bash CI/scripts/install.sh
+script: 
+  - python CI/test/test.py
+  - python CI/test/test.py
