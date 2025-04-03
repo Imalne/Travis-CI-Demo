@@ -1,2 +1,2 @@
 pip3 install matplotlib
-pip3 install numpy as np
+pip3 install numpy
